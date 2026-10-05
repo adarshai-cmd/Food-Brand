@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" stroke="currentColor">
+  <!-- Outer Rind -->
+  <circle cx="60" cy="60" r="54" fill="#FF6B00" stroke="#111111" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Inner White Pith -->
+  <circle cx="60" cy="60" r="46" fill="#FFF8EC" stroke="#111111" stroke-width="2.5"/>
+  <!-- Pulp Circle Base -->
+  <circle cx="60" cy="60" r="41" fill="#FFE14D"/>
+  
+  <!-- Citrus Segments with hand-drawn wobble -->
+  <g fill="#FF6B00" stroke="#111111" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Top-Right -->
+    <path d="M 64 54 L 88 40 A 36 36 0 0 0 74 26 L 64 54 Z" />
+    <!-- Top-Left -->
+    <path d="M 56 54 L 46 26 A 36 36 0 0 0 32 40 L 56 54 Z" />
+    <!-- Far-Left -->
+    <path d="M 54 58 L 24 50 A 36 36 0 0 0 24 70 L 54 62 Z" />
+    <!-- Bottom-Left -->
+    <path d="M 56 66 L 32 80 A 36 36 0 0 0 46 94 L 56 66 Z" />
+    <!-- Bottom-Right -->
+    <path d="M 64 66 L 74 94 A 36 36 0 0 0 88 80 L 64 66 Z" />
+    <!-- Far-Right -->
+    <path d="M 66 62 L 96 70 A 36 36 0 0 0 96 50 L 66 58 Z" />
+  </g>
+
+  <!-- Center Pith Dot -->
+  <circle cx="60" cy="60" r="5" fill="#FFF8EC" stroke="#111111" stroke-width="2"/>
+  
+  <!-- Juicy Seeds / Highlights -->
+  <ellipse cx="60" cy="40" rx="2" ry="4" fill="#FFF8EC" transform="rotate(-15 60 40)"/>
+  <ellipse cx="75" cy="68" rx="2" ry="4" fill="#FFF8EC" transform="rotate(45 75 68)"/>
+  <ellipse cx="45" cy="68" rx="2" ry="4" fill="#FFF8EC" transform="rotate(-45 45 68)"/>
+</svg>

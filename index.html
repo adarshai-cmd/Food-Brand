@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ZestPop ✦ Dopamine Citrus Pop &amp; Sparkling Prebiotic Sodas</title>
+  <meta name="description" content="Wild-crafted sparkling citrus sodas made with 100% real cold-pressed fruit, 5g gut-loving prebiotic fiber, and zero fake junk. Feel the unfiltered sunshine!">
+  <meta name="theme-color" content="#FF6B00">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:site_name" content="ZestPop Beverage Co.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ZestPop ✦ Dopamine Citrus Pop &amp; Sparkling Fruit Sodas">
+  <meta property="og:description" content="Wild-crafted sparkling citrus sodas made with 100% real cold-pressed fruit, 5g gut-loving prebiotic plant fiber, and zero artificial nonsense.">
+  <meta property="og:url" content="https://zestpop.demo">
+  <meta property="og:image" content="assets/can-tangerine.svg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZestPop ✦ Dopamine Citrus Pop">
+  <meta name="twitter:description" content="100% Real Squeezed Citrus. 5g Prebiotic Fiber. Unapologetic Fizz.">
+  <meta name="twitter:image" content="assets/can-tangerine.svg">
+
+  <!-- Google Fonts Preconnect & Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800;12..96,900&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800;12..96,900&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- GSAP 3 & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll CDN -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Subtle Tactile Paper Grain Overlay -->
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <!-- Custom Magnetic Cursor (Hidden on touch devices) -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+    <span class="cursor-text" id="cursor-text"></span>
+  </div>
+
+  <!-- ========================================================================
+       1. PRELOADER: Product Liquid Rise Animation + Colored Wipe Reveal
+       ======================================================================== -->
+  <div id="preloader" class="preloader" aria-label="Loading ZestPop">
+    <div class="preloader-content">
+      <!-- Hand-crafted SVG Can with rising liquid and bubbles -->
+      <div class="preloader-can-wrap">
+        <svg class="preloader-can-svg" viewBox="0 0 140 240" fill="none" width="120" height="200">
+          <!-- Can Lid & Rim -->
+          <path d="M 40 18 C 40 14, 100 14, 100 18 L 105 28 C 105 32, 35 32, 35 28 Z" fill="#FFF8EC" stroke="#111111" stroke-width="2.5"/>
+          <ellipse cx="70" cy="18" rx="28" ry="5" fill="#E8DEC8" stroke="#111111" stroke-width="2"/>
+          <path d="M 64 17 L 76 17 M 70 15 L 70 19" stroke="#111111" stroke-width="2"/>
+
+          <!-- Can Neck Taper -->
+          <path d="M 35 28 L 105 28 L 115 42 L 25 42 Z" fill="#FFF8EC" stroke="#111111" stroke-width="2.5"/>
+
+          <!-- Can Body Base Shape -->
+          <rect x="25" y="42" width="90" height="170" rx="4" fill="#FFF8EC" stroke="#111111" stroke-width="3"/>
+          <path d="M 25 212 L 34 228 C 34 232, 106 232, 106 228 L 115 212 Z" fill="#FFF8EC" stroke="#111111" stroke-width="2.5"/>
+
+          <!-- Liquid Mask Clip -->
+          <clipPath id="preloader-liquid-clip">
+            <rect x="26" y="43" width="88" height="168" rx="3"/>
+          </clipPath>
+
+          <!-- Animated Liquid Rising Group -->
+          <g clip-path="url(#preloader-liquid-clip)">
+            <g id="preloader-liquid" transform="translate(0, 210)">
+              <!-- Tangerine Liquid with wavy crest -->
+              <path d="M 0 10 Q 35 -5 70 10 T 140 10 L 140 250 L 0 250 Z" fill="#FF6B00"/>
+              <!-- Sunshine highlight wave -->
+              <path d="M 0 16 Q 35 2 70 16 T 140 16 L 140 250 L 0 250 Z" fill="#FFE14D" opacity="0.4"/>
+              
+              <!-- Rising Carbonation Bubbles -->
+              <circle cx="45" cy="45" r="3" fill="#FFF8EC" opacity="0.8" class="bubble-fizz"/>
+              <circle cx="85" cy="80" r="4.5" fill="#FFF8EC" opacity="0.8" class="bubble-fizz"/>
+              <circle cx="65" cy="120" r="2.5" fill="#FFF8EC" opacity="0.8" class="bubble-fizz"/>
+              <circle cx="95" cy="155" r="3.5" fill="#FFF8EC" opacity="0.8" class="bubble-fizz"/>
+              <circle cx="40" cy="170" r="2" fill="#FFF8EC" opacity="0.8" class="bubble-fizz"/>
+            </g>
+          </g>
+
+          <!-- Can Center Stamp -->
+          <rect x="36" y="98" width="68" height="22" rx="4" fill="#FFF8EC" stroke="#111111" stroke-width="2"/>
+          <text x="70" y="114" font-family="'Bricolage Grotesque', sans-serif" font-weight="900" font-size="12" fill="#111111" text-anchor="middle" letter-spacing="1">ZESTPOP</text>
+        </svg>
+      </div>
+
+      <div class="preloader-text-wrap">
+        <div class="preloader-title">ZESTPOP</div>
+        <p class="preloader-status-text" id="preloader-status">Cold-pressing pure citrus...</p>
+      </div>
+    </div>
+
+    <!-- Dual Colored Wipe Reveal Curtains -->
+    <div class="preloader-wipe wipe-tangerine" id="wipe-tangerine"></div>
+    <div class="preloader-wipe wipe-sunshine" id="wipe-sunshine"></div>
+  </div>
+
+  <!-- ========================================================================
+       2. STICKY COMPACT NAVIGATION (Hide-on-scroll-down, Show-on-scroll-up)
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#" class="brand-logo magnetic-target" aria-label="ZestPop Home - Back to top" data-cursor="Slurp!">
+        <img src="assets/citrus-slice.svg" alt="ZestPop Citrus Logo" class="logo-icon" width="32" height="32" aria-hidden="true">
+        <span>Zest<span class="pop-dot">Pop</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#flavors" class="nav-link magnetic-target">Flavors</a>
+        <a href="#story" class="nav-link magnetic-target">Story</a>
+        <a href="#process" class="nav-link magnetic-target">Process</a>
+        <a href="#testimonials" class="nav-link magnetic-target">Fan Mail</a>
+        <a href="#faq" class="nav-link magnetic-target">FAQ</a>
+        <a href="#join" class="nav-link magnetic-target">Join</a>
+      </nav>
+
+      <!-- Nav Actions (Secret Easter Egg, Always-Visible Cart & Hamburger Button) -->
+      <div class="nav-actions">
+        <!-- Secret Drop 404 Button (Desktop/Tablet) -->
+        <button type="button" class="btn btn-sm btn-cream secret-drop-btn magnetic-target" id="btn-secret-drop" aria-label="Open Secret Flavor Test Lab" data-cursor="Secret!">
+          <span>Secret Drop 👻</span>
+        </button>
+
+        <!-- Cart Button (Always visible on all screen sizes) -->
+        <button type="button" class="btn-cart magnetic-target" id="btn-cart" aria-label="Shopping Cart containing 0 items" data-cursor="Cart">
+          <svg class="cart-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+
+        <!-- Hamburger Toggle Button -->
+        <button type="button" class="mobile-toggle magnetic-target" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu-overlay" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       FULL-SCREEN COLORFUL MOBILE NAVIGATION OVERLAY
+       ======================================================================== -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu" hidden>
+    <div class="mobile-menu-header">
+      <a href="#" class="brand-logo mobile-brand-logo" aria-label="ZestPop Home">
+        <img src="assets/citrus-slice.svg" alt="" class="logo-icon" width="32" height="32" aria-hidden="true">
+        <span>Zest<span class="pop-dot">Pop</span></span>
+      </a>
+      <button type="button" class="btn-menu-close" id="btn-menu-close" aria-label="Close navigation menu">✕</button>
+    </div>
+    
+    <nav class="mobile-nav-links" aria-label="Mobile Navigation Links">
+      <a href="#flavors" class="mobile-nav-item"><span class="nav-num">01</span> Flavors</a>
+      <a href="#story" class="mobile-nav-item"><span class="nav-num">02</span> Story</a>
+      <a href="#process" class="mobile-nav-item"><span class="nav-num">03</span> Process</a>
+      <a href="#testimonials" class="mobile-nav-item"><span class="nav-num">04</span> Fan Mail</a>
+      <a href="#faq" class="mobile-nav-item"><span class="nav-num">05</span> FAQ</a>
+      <a href="#join" class="mobile-nav-item"><span class="nav-num">06</span> VIP Club</a>
+    </nav>
+
+    <div class="mobile-menu-footer">
+      <a href="#flavors" class="btn btn-primary btn-mobile-shop" id="btn-mobile-shop">Shop All Flavors ✦</a>
+      <button type="button" class="btn btn-cream btn-sm mobile-secret-btn" id="btn-mobile-secret">Secret 404 Drop 👻</button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- ======================================================================
+         3. HERO SECTION (Mobile: Stacked, full-width CTA, gentle float)
+         ====================================================================== -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-heading" data-theme="cream">
+      <div class="container hero-grid">
+        <!-- Top Hero Column: Text & CTA -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="section-tag tangerine">✦ 100% Real Squeeze</span>
+            <div class="hero-rating-badge">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span><strong>4.9/5</strong> from 14,800+ gulps</span>
+            </div>
+          </div>
+
+          <!-- Headline with split word masking -->
+          <h1 class="hero-title" id="hero-heading">
+            <span class="split-line"><span class="hero-word">THE</span> <span class="hero-word">HIGH-FIZZ</span></span>
+            <span class="split-line"><span class="hero-word highlight-tangerine">DOPAMINE</span> <span class="hero-word">HIT</span></span>
+            <span class="split-line"><span class="hero-word">YOUR</span> <span class="hero-word">TASTEBUDS</span></span>
+            <span class="split-line"><span class="hero-word highlight-cobalt">CRAVE.</span></span>
+          </h1>
+
+          <p class="hero-desc">
+            Wild sparkling fruit sodas cold-crushed from organic citrus, supercharged with 5g of gut-pampering plant fiber, and bubbling with unfiltered sunshine. Zero fake stevia weirdness. Zero 3 PM chemical crash.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#flavors" class="btn btn-primary btn-hero-cta magnetic-target" data-cursor="Pop!">
+              <span>Shop The Drops</span>
+              <span aria-hidden="true">✦</span>
+            </a>
+            <a href="#story" class="btn btn-secondary btn-hero-sub magnetic-target" data-cursor="Explore">
+              <span>Why Real Fruit?</span>
+            </a>
+          </div>
+
+          <div class="hero-trust-list">
+            <div class="trust-item">
+              <span class="trust-check" aria-hidden="true">✓</span>
+              <span>Real Orchard Fruit</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-check" aria-hidden="true">✓</span>
+              <span>5g Prebiotic Fiber</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-check" aria-hidden="true">✓</span>
+              <span>Only 35 Calories</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Hero Column: Product Can & Doodles -->
+        <div class="hero-visual" id="hero-visual">
+          <!-- Sunburst Backdrop Disc -->
+          <div class="hero-backdrop-circle" aria-hidden="true"></div>
+
+          <!-- Flagship Can Slot -->
+          <div class="hero-product-slot" id="hero-product-slot" data-cursor="Juicy!">
+            <img src="assets/can-tangerine.svg" alt="Can of Electric Tangerine Sparkling Soda" class="hero-can-img" width="220" height="400" fetchpriority="high">
+          </div>
+
+          <!-- Essential Floating Doodle (Rest hidden on small screens) -->
+          <img src="assets/citrus-slice.svg" alt="" class="doodle-float doodle-citrus-hero float-doodle" width="90" height="90" aria-hidden="true">
+          <img src="assets/star-burst.svg" alt="" class="doodle-float doodle-star-hero float-doodle desktop-only-doodle" width="60" height="60" aria-hidden="true">
+          <img src="assets/bubble.svg" alt="" class="doodle-float doodle-bubbles-hero float-doodle desktop-only-doodle" width="80" height="100" aria-hidden="true">
+          
+          <!-- Hand-drawn Arrow Sticker -->
+          <div class="doodle-float doodle-arrow-hero float-doodle" aria-hidden="true">
+            <img src="assets/hand-arrow.svg" alt="" width="95" height="70">
+            <span class="doodle-arrow-label">100% Real Squeeze!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. MARQUEE STRIP (Slower & Scaled on Mobile)
+         ====================================================================== -->
+    <section class="marquee-section" id="marquee-section" aria-label="Brand values ticker">
+      <div class="marquee-track" id="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item">100% Real Citrus <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">5g Plant Prebiotic Fiber <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Only 35 Calories <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Zero Fake Sweeteners <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Naturally Sparkling <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Micro-Carbonated Bubbles <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">100% Recyclable Cans <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Tastes Like Pure Sunshine <span class="marquee-separator" aria-hidden="true">✦</span></span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span class="marquee-item">100% Real Citrus <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">5g Plant Prebiotic Fiber <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Only 35 Calories <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Zero Fake Sweeteners <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Naturally Sparkling <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Micro-Carbonated Bubbles <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">100% Recyclable Cans <span class="marquee-separator" aria-hidden="true">✦</span></span>
+          <span class="marquee-item">Tastes Like Pure Sunshine <span class="marquee-separator" aria-hidden="true">✦</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. FLAVORS SECTION (Native Swipe Carousel + Dot Indicators)
+         ====================================================================== -->
+    <section class="flavors-section" id="flavors" aria-labelledby="flavors-heading" data-theme="sunshine">
+      <div class="container flavors-intro-container">
+        <div class="flavors-header">
+          <span class="section-tag cobalt">THE FLAVOR REVOLUTION</span>
+          <h2 class="section-title" id="flavors-heading">CHOOSE YOUR JUICY EXPLOSION</h2>
+          <p class="section-desc">
+            Four unapologetically bright flavor bombs crafted with single-origin orchard fruit, fragrant peel essences, and hyper-fine carbonation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Horizontal Wrapper (Swipeable Carousel on Mobile, Pinned on Desktop) -->
+      <div class="flavors-horizontal-wrapper" id="flavors-wrapper">
+        <!-- Background Parallax Doodle Layer (Desktop only) -->
+        <div class="flavors-parallax-layer" aria-hidden="true">
+          <img src="assets/citrus-slice.svg" alt="" class="p-doodle p-doodle-1" width="90" height="90">
+          <img src="assets/star-burst.svg" alt="" class="p-doodle p-doodle-2" width="70" height="70">
+          <img src="assets/bubble.svg" alt="" class="p-doodle p-doodle-3" width="80" height="100">
+          <img src="assets/squiggle.svg" alt="" class="p-doodle p-doodle-4" width="120" height="40">
+          <img src="assets/stamp-badge.svg" alt="" class="p-doodle p-doodle-5" width="85" height="85">
+        </div>
+
+        <!-- Sliding Product Cards Track -->
+        <div class="flavors-track" id="flavors-track">
+          <!-- FLAVOR 1: Electric Tangerine -->
+          <article class="flavor-card card-tangerine tilt-card" id="flavor-tangerine" data-cursor="Taste">
+            <span class="flavor-badge rotate-neg">★ BESTSELLER</span>
+            
+            <div class="flavor-can-stage">
+              <div class="flavor-stage-bg" aria-hidden="true"></div>
+              <img src="assets/can-tangerine.svg" alt="Can of Electric Tangerine Soda" class="flavor-can-img" width="160" height="235" loading="lazy" decoding="async">
+            </div>
+
+            <div class="flavor-card-content">
+              <h3 class="flavor-name">Electric Tangerine</h3>
+              <p class="flavor-notes">Sun-drenched Sicilian mandarin with a zesty kumquat zing and fragrant peel oils.</p>
+              
+              <div class="flavor-chips">
+                <span class="flavor-chip">35 Cals</span>
+                <span class="flavor-chip">5g Fiber</span>
+                <span class="flavor-chip">Immunity Boost</span>
+              </div>
+            </div>
+
+            <div class="flavor-card-footer">
+              <div class="flavor-price-wrap">
+                <span class="flavor-price">$36</span>
+                <span class="flavor-unit">12-Pack Cans</span>
+              </div>
+              <button type="button" class="btn btn-sm btn-card-add btn-add-cart magnetic-target" data-product="Electric Tangerine" data-image="assets/can-tangerine.svg" data-price="36" aria-label="Add Electric Tangerine 12-pack to box">
+                Add to Box +
+              </button>
+            </div>
+          </article>
+
+          <!-- FLAVOR 2: Yuzu Cosmic Fizz -->
+          <article class="flavor-card card-sunshine tilt-card" id="flavor-yuzu" data-cursor="Taste">
+            <span class="flavor-badge rotate-pos">⚡ CULT FAVORITE</span>
+            
+            <div class="flavor-can-stage">
+              <div class="flavor-stage-bg" aria-hidden="true"></div>
+              <img src="assets/can-yuzu.svg" alt="Can of Yuzu Cosmic Fizz Soda" class="flavor-can-img" width="160" height="235" loading="lazy" decoding="async">
+            </div>
+
+            <div class="flavor-card-content">
+              <h3 class="flavor-name">Yuzu Cosmic Fizz</h3>
+              <p class="flavor-notes">Crisp Japanese yuzu, Meyer lemon splash, and crushed botanical mountain herbs.</p>
+              
+              <div class="flavor-chips">
+                <span class="flavor-chip">30 Cals</span>
+                <span class="flavor-chip">5g Fiber</span>
+                <span class="flavor-chip">Ultra Tart</span>
+              </div>
+            </div>
+
+            <div class="flavor-card-footer">
+              <div class="flavor-price-wrap">
+                <span class="flavor-price">$36</span>
+                <span class="flavor-unit">12-Pack Cans</span>
+              </div>
+              <button type="button" class="btn btn-sm btn-card-add btn-add-cart magnetic-target" data-product="Yuzu Cosmic Fizz" data-image="assets/can-yuzu.svg" data-price="36" aria-label="Add Yuzu Cosmic Fizz 12-pack to box">
+                Add to Box +
+              </button>
+            </div>
+          </article>
+
+          <!-- FLAVOR 3: Wild Berry Bubble -->
+          <article class="flavor-card card-bubblegum tilt-card" id="flavor-berry" data-cursor="Taste">
+            <span class="flavor-badge rotate-neg">✦ NEW DROP</span>
+            
+            <div class="flavor-can-stage">
+              <div class="flavor-stage-bg" aria-hidden="true"></div>
+              <img src="assets/can-berry.svg" alt="Can of Wild Berry Bubble Soda" class="flavor-can-img" width="160" height="235" loading="lazy" decoding="async">
+            </div>
+
+            <div class="flavor-card-content">
+              <h3 class="flavor-name">Wild Berry Bubble</h3>
+              <p class="flavor-notes">Crushed Pacific marionberries, ruby hibiscus blossom, and ripe pink raspberry.</p>
+              
+              <div class="flavor-chips">
+                <span class="flavor-chip">35 Cals</span>
+                <span class="flavor-chip">5g Fiber</span>
+                <span class="flavor-chip">Antioxidants</span>
+              </div>
+            </div>
+
+            <div class="flavor-card-footer">
+              <div class="flavor-price-wrap">
+                <span class="flavor-price">$36</span>
+                <span class="flavor-unit">12-Pack Cans</span>
+              </div>
+              <button type="button" class="btn btn-sm btn-card-add btn-add-cart magnetic-target" data-product="Wild Berry Bubble" data-image="assets/can-berry.svg" data-price="36" aria-label="Add Wild Berry Bubble 12-pack to box">
+                Add to Box +
+              </button>
+            </div>
+          </article>
+
+          <!-- FLAVOR 4: Midnight Lagoon -->
+          <article class="flavor-card card-cobalt tilt-card" id="flavor-lagoon" data-cursor="Taste">
+            <span class="flavor-badge rotate-pos">★ LIMITED RELEASE</span>
+            
+            <div class="flavor-can-stage">
+              <div class="flavor-stage-bg" aria-hidden="true"></div>
+              <img src="assets/can-lagoon.svg" alt="Can of Midnight Lagoon Soda" class="flavor-can-img" width="160" height="235" loading="lazy" decoding="async">
+            </div>
+
+            <div class="flavor-card-content">
+              <h3 class="flavor-name">Midnight Lagoon</h3>
+              <p class="flavor-notes">Deep mountain blueberries paired with fresh spearmint and key lime crush.</p>
+              
+              <div class="flavor-chips">
+                <span class="flavor-chip">38 Cals</span>
+                <span class="flavor-chip">5g Fiber</span>
+                <span class="flavor-chip">Zen Mood</span>
+              </div>
+            </div>
+
+            <div class="flavor-card-footer">
+              <div class="flavor-price-wrap">
+                <span class="flavor-price">$36</span>
+                <span class="flavor-unit">12-Pack Cans</span>
+              </div>
+              <button type="button" class="btn btn-sm btn-card-add btn-add-cart magnetic-target" data-product="Midnight Lagoon" data-image="assets/can-lagoon.svg" data-price="36" aria-label="Add Midnight Lagoon 12-pack to box">
+                Add to Box +
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Mobile Carousel Dot Indicators -->
+      <div class="carousel-dots" id="carousel-dots" aria-label="Flavor Carousel Pagination">
+        <button type="button" class="dot active" data-index="0" aria-label="Go to slide 1: Electric Tangerine"></button>
+        <button type="button" class="dot" data-index="1" aria-label="Go to slide 2: Yuzu Cosmic Fizz"></button>
+        <button type="button" class="dot" data-index="2" aria-label="Go to slide 3: Wild Berry Bubble"></button>
+        <button type="button" class="dot" data-index="3" aria-label="Go to slide 4: Midnight Lagoon"></button>
+      </div>
+    </section>
+
+    <!-- Variety Pack Callout Banner Section (Separated from 100svh pinned section) -->
+    <section class="variety-section" id="variety" aria-label="Dopamine Variety Pack" data-theme="sunshine">
+      <div class="container">
+        <div class="variety-banner">
+          <div class="variety-banner-text">
+            <h3>Can't Pick Just One Flavor?</h3>
+            <p>Snag our <strong>Dopamine Variety 12-Pack</strong> (3 cans of each flavor) with free priority shipping!</p>
+          </div>
+          <button type="button" class="btn btn-primary btn-add-cart magnetic-target" data-product="Dopamine Variety Pack" data-image="assets/citrus-slice.svg" data-price="36" data-cursor="Mix!">
+            Get The Variety Pack - $36
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. STORY SECTION (Masked Line Reveals & Stat Counter Grid)
+         ====================================================================== -->
+    <section class="story-section" id="story" aria-labelledby="story-heading" data-theme="bubblegum">
+      <div class="container story-grid">
+        <!-- Left Visual / Quote Frame -->
+        <div class="story-visual-wrap">
+          <div class="story-card-frame tilt-card" data-cursor="Story">
+            <img src="assets/stamp-badge.svg" alt="Certified Real Squeeze Badge" class="story-stamp" width="90" height="90">
+            
+            <div class="story-card-inner">
+              <div class="story-quote-mark" aria-hidden="true">“</div>
+              <p class="story-quote">
+                If a five-year-old can't pronounce an ingredient on the label, it has zero business swimming in your bloodstream.
+              </p>
+              <div class="story-author">
+                <div class="story-avatar" aria-hidden="true">
+                  <img src="assets/smile.svg" alt="" width="32" height="32">
+                </div>
+                <div class="story-author-info">
+                  <span class="story-author-name">Leo &amp; Maya Chen</span>
+                  <span class="story-author-role">Founders &amp; Chief Squeezers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Story Narrative & 3 Stat Slots -->
+        <div class="story-content">
+          <span class="section-tag tangerine">OUR STORY</span>
+          <h2 class="section-title" id="story-heading">WE FIRED THE FAKE FLAVOR CHEMISTS.</h2>
+          
+          <!-- Masked line-by-line copy reveal -->
+          <div class="story-copy">
+            <div class="story-mask-line">
+              <span>We started ZestPop in a cramped Brooklyn kitchen with one non-negotiable rule: <strong>real fruit, real fizz, real joy.</strong></span>
+            </div>
+            <div class="story-mask-line">
+              <span>Traditional soda giants pump their cans full of high-fructose corn syrup, lab-derived "natural flavors", and synthetic dyes that leave you feeling sluggish. We went straight to coastal orchards and pressed whole, sun-ripened fruit.</span>
+            </div>
+            <div class="story-mask-line">
+              <span>Then we added <strong>organic cassava plant fiber</strong> to nourish your gut microbiome, carbonated it to hyper-fine crispness, and ditched the metallic stevia aftertaste for good.</span>
+            </div>
+          </div>
+
+          <!-- 3 Animated-Number Stat Slots (2-col grid on mobile) -->
+          <div class="stats-grid">
+            <div class="stat-card" data-cursor="100%">
+              <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+              <div class="stat-label">Real Cold-Pressed Fruit Juice</div>
+            </div>
+            <div class="stat-card" data-cursor="35">
+              <div class="stat-number" data-target="35" data-suffix="">0</div>
+              <div class="stat-label">Calories Per Crisp Can</div>
+            </div>
+            <div class="stat-card stat-card-wide" data-cursor="5g">
+              <div class="stat-number" data-target="5" data-suffix="g">0g</div>
+              <div class="stat-label">Gut-Loving Prebiotic Fiber</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. PROCESS TIMELINE (Vertical on Mobile, Horizontal on Desktop)
+         ====================================================================== -->
+    <section class="process-section" id="process" aria-labelledby="process-heading" data-theme="cream">
+      <div class="container">
+        <div class="process-header">
+          <span class="section-tag sunshine">FOUR SIMPLE STEPS</span>
+          <h2 class="section-title" id="process-heading">FROM GROVE TO GLUG</h2>
+          <p class="section-desc">
+            We don't use concentrates, powders, or lab tricks. Here is how fresh orchard sunshine ends up in your daily ritual.
+          </p>
+        </div>
+
+        <!-- SVG Hand-drawn Connecting Line (Desktop only) -->
+        <div class="process-svg-wrap" aria-hidden="true">
+          <svg class="process-svg-canvas" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path id="process-draw-line" d="M 60 50 C 200 10, 300 90, 400 50 C 500 10, 600 90, 720 50 C 820 10, 900 80, 960 50" fill="none" stroke="#FF6B00" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 8"/>
+          </svg>
+        </div>
+
+        <div class="process-timeline">
+          <!-- Step 1: PICK -->
+          <div class="process-step-card tilt-card" data-cursor="01">
+            <span class="step-number-badge">STEP 01</span>
+            <div class="step-icon-wrap" aria-hidden="true">
+              <img src="assets/citrus-slice.svg" alt="" width="42" height="42">
+            </div>
+            <h3 class="step-title">PICK</h3>
+            <div class="step-subtitle">Orchard Harvest</div>
+            <p class="step-desc">
+              Sun-drenched citrus hand-harvested at peak brix ripeness from regenerative coastal groves in Sicily and California.
+            </p>
+          </div>
+
+          <!-- Step 2: PRESS -->
+          <div class="process-step-card tilt-card" data-cursor="02">
+            <span class="step-number-badge">STEP 02</span>
+            <div class="step-icon-wrap" aria-hidden="true">
+              <img src="assets/hand-arrow.svg" alt="" width="42" height="42" style="transform: rotate(45deg);">
+            </div>
+            <h3 class="step-title">PRESS</h3>
+            <div class="step-subtitle">Cold-Crushed Magic</div>
+            <p class="step-desc">
+              Slow cold-pressed within 24 hours of harvest to capture delicate aromatic peel oils, vibrant color, and living bioflavonoids.
+            </p>
+          </div>
+
+          <!-- Step 3: POUR -->
+          <div class="process-step-card tilt-card" data-cursor="03">
+            <span class="step-number-badge">STEP 03</span>
+            <div class="step-icon-wrap" aria-hidden="true">
+              <img src="assets/bubble.svg" alt="" width="42" height="42">
+            </div>
+            <h3 class="step-title">POUR</h3>
+            <div class="step-subtitle">Prebiotic Alchemy</div>
+            <p class="step-desc">
+              Blended with prebiotic organic cassava root fiber and pure micro-filtered alpine spring water for effortless gut harmony.
+            </p>
+          </div>
+
+          <!-- Step 4: POP -->
+          <div class="process-step-card tilt-card" data-cursor="04">
+            <span class="step-number-badge">STEP 04</span>
+            <div class="step-icon-wrap" aria-hidden="true">
+              <img src="assets/star-burst.svg" alt="" width="42" height="42">
+            </div>
+            <h3 class="step-title">POP</h3>
+            <div class="step-subtitle">High-Velocity Fizz</div>
+            <p class="step-desc">
+              Sealed in 100% infinitely recyclable aluminum cans at crisp hyper-carbonation. Crack the tab and feel that dopamine roar!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. TESTIMONIALS STRIP (Warm, funny, human quotes)
+         ====================================================================== -->
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading" data-theme="bubblegum">
+      <div class="container">
+        <div class="testimonials-header">
+          <span class="section-tag tangerine">VERIFIED SIPPER LOVE</span>
+          <h2 class="section-title" id="testimonials-heading">FAN MAIL FROM SODA CRUSHERS</h2>
+          <p class="section-desc">
+            Real reactions from fictional human beings who take their daily fizz very seriously.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card tilt-card">
+            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonial-quote">
+              “I used to drink 'sparkling water' that tasted like someone whispered the word 'lime' into a glass of TV static. ZestPop punched me in the face with pure orchard sunshine.”
+            </p>
+            <div class="testimonial-author">
+              <span class="author-name">Penelope Fizz</span>
+              <span class="author-title">Professional Lemon Enthusiast &amp; Nap Consultant</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card tilt-card">
+            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonial-quote">
+              “My gut bacteria literally sent me a handwritten thank-you note. 10/10 would crush 4 cans of Yuzu Cosmic during an afternoon spreadsheet meltdown.”
+            </p>
+            <div class="testimonial-author">
+              <span class="author-name">Bram V. Stoker</span>
+              <span class="author-title">Midnight Spreadsheet Warrior &amp; Night Owl</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card tilt-card">
+            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+            <p class="testimonial-quote">
+              “I gave an Electric Tangerine to my grumpy neighbor Harold. He smiled for the first time since 1997. Highly suspicious, intensely delicious beverage.”
+            </p>
+            <div class="testimonial-author">
+              <span class="author-name">Grandma Beverly</span>
+              <span class="author-title">Retired Soda Rebel &amp; Pickleball Menace</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Demo Badge Disclaimer -->
+        <div class="demo-badge-wrap">
+          <div class="demo-badge">
+            <span class="demo-sparkle" aria-hidden="true">✦</span>
+            <span><strong>DEMO CONCEPT BRAND</strong> — Built for frontend engineering, design system &amp; creative showcase. (Sadly, no real soda is shipped yet!)</span>
+            <span class="demo-sparkle" aria-hidden="true">✦</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. SHORT ACCESSIBLE FAQ SECTION
+         ====================================================================== -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading" data-theme="sunshine">
+      <div class="container">
+        <div class="faq-header">
+          <span class="section-tag cobalt">GOT BURNING QUESTIONS?</span>
+          <h2 class="section-title" id="faq-heading">FREQUENTLY POPPED QUESTIONS</h2>
+          <p class="section-desc">Everything you wondered about whole fruits, happy tummies, and crisp bubbles.</p>
+        </div>
+
+        <div class="faq-list">
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
+              <span>Is ZestPop made with real fruit juice or fake "essence"?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-ans-1" hidden>
+              <p>
+                100% whole organic fruit juice! We press cold-harvested Sicilian mandarins, Japanese yuzu, and Pacific marionberries. No "natural flavors" synthesized in test tubes, no chemical essences, no weird powdered shortcuts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
+              <span>What on earth is prebiotic fiber and why does my gut care?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-ans-2" hidden>
+              <p>
+                Prebiotics are plant-based soluble fibers (we use organic cassava root) that act as an all-you-can-eat gourmet buffet for your beneficial gut flora. They promote smooth digestion, immunity, and help keep blood sugar steady.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
+              <span>How much sugar and calories are inside each can?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-ans-3" hidden>
+              <p>
+                Only 30 to 38 calories per 12 oz can and 2g of naturally occurring fruit sugars. Zero cane sugar, zero high-fructose corn syrup, and zero fake metallic sweeteners like aspartame or concentrated stevia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-4">
+              <span>Are your aluminum cans truly recyclable?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-ans-4" hidden>
+              <p>
+                100% infinitely recyclable! Aluminum can be melted down and re-pressed into a brand new beverage can in as little as 60 days. No toxic plastic lining leaks, no landfill guilt.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-5">
+              <span>What happens if I try a flavor and don't love it?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-ans-5" hidden>
+              <p>
+                Our <strong>100% Dopamine Guarantee</strong> has your back. Shoot an email to hi@zestpop.com with your order number and we'll swap your box for a different flavor or refund you completely. Pinky promise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secondary Marquee Break -->
+    <div class="marquee-section secondary" aria-hidden="true">
+      <div class="marquee-track" id="marquee-track-2">
+        <div class="marquee-content">
+          <span class="marquee-item">CRACK IT COLD <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">HEAR THE FIZZ <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">SMILE BIGGER <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">FEEL THE SUNSHINE <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">CRACK IT COLD <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">HEAR THE FIZZ <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">SMILE BIGGER <span class="marquee-separator">★</span></span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span class="marquee-item">CRACK IT COLD <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">HEAR THE FIZZ <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">SMILE BIGGER <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">FEEL THE SUNSHINE <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">CRACK IT COLD <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">HEAR THE FIZZ <span class="marquee-separator">★</span></span>
+          <span class="marquee-item">SMILE BIGGER <span class="marquee-separator">★</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         10. SUBSCRIPTION / JOIN SECTION (Stacked Inputs on Mobile, 16px Font)
+         ====================================================================== -->
+    <section class="join-section" id="join" aria-labelledby="join-heading" data-theme="tangerine">
+      <div class="container">
+        <div class="join-banner">
+          <img src="assets/sparkle.svg" alt="" class="join-doodle-sparkle float-doodle desktop-only-doodle" width="75" height="75" aria-hidden="true">
+          <img src="assets/smile.svg" alt="" class="join-doodle-smile float-doodle desktop-only-doodle" width="85" height="85" aria-hidden="true">
+
+          <div class="join-content">
+            <span class="sticker rotate-neg" style="margin-bottom: 1.25rem;">✦ VIP ZEST CLUB ✦</span>
+            
+            <h2 class="join-title" id="join-heading">NEVER RUN DRY ON DOPAMINE.</h2>
+            
+            <p class="join-desc">
+              Get chilled cases delivered straight to your door on your schedule. Save 15% on every drop, get secret test batches, and receive VIP member merch.
+            </p>
+
+            <form class="join-form" id="join-form" novalidate>
+              <input 
+                type="email" 
+                name="email" 
+                id="join-email" 
+                class="join-input" 
+                placeholder="Drop your email here..." 
+                required 
+                inputmode="email"
+                autocomplete="email"
+                aria-label="Email address for Zest Club subscription"
+              >
+              <button type="submit" class="btn btn-join magnetic-target" data-cursor="Join!">
+                Join The Club ✦
+              </button>
+            </form>
+
+            <div class="join-perks">
+              <span>✓ 15% off every order</span>
+              <span>✓ Free door-to-door delivery</span>
+              <span>✓ Skip, pause, or cancel anytime</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       11. FOOTER (Fluid Clamp Wordmark, Stacked Mobile Links & Socials)
+       ======================================================================== -->
+  <footer class="site-footer" id="site-footer" data-theme="ink">
+    <div class="container">
+      <!-- Giant Brand Wordmark with fluid responsive clamp -->
+      <div class="footer-wordmark-wrap">
+        <span class="footer-wordmark" id="footer-wordmark" data-cursor="ZEST!">ZESTPOP</span>
+      </div>
+
+      <div class="footer-grid">
+        <!-- Column 1: Brand Info & Eco Badges -->
+        <div class="footer-col">
+          <a href="#" class="brand-logo magnetic-target" style="color: var(--cream);" data-cursor="Top">
+            <img src="assets/citrus-slice.svg" alt="ZestPop Logo" class="logo-icon" width="32" height="32" aria-hidden="true">
+            <span>Zest<span style="color: var(--tangerine);">Pop</span></span>
+          </a>
+          <p class="footer-brand-bio">
+            Dopamine citrus pop hand-crafted for the wildly optimistic. Real orchard fruit, prebiotic plant fiber, and unapologetic fizz.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge-pill">1% For The Planet</span>
+            <span class="footer-badge-pill">100% Recyclable</span>
+            <span class="footer-badge-pill">B-Corp Certified</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Flavors -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Flavors</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#flavors" class="footer-nav-link magnetic-target">Electric Tangerine</a></li>
+            <li><a href="#flavors" class="footer-nav-link magnetic-target">Yuzu Cosmic Fizz</a></li>
+            <li><a href="#flavors" class="footer-nav-link magnetic-target">Wild Berry Bubble</a></li>
+            <li><a href="#flavors" class="footer-nav-link magnetic-target">Midnight Lagoon</a></li>
+            <li><a href="#flavors" class="footer-nav-link magnetic-target">Dopamine Variety 12-Pack</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: The Brand -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#story" class="footer-nav-link magnetic-target">Our Orchard Story</a></li>
+            <li><a href="#process" class="footer-nav-link magnetic-target">The 4-Step Process</a></li>
+            <li><a href="#testimonials" class="footer-nav-link magnetic-target">Customer Fan Mail</a></li>
+            <li><a href="#faq" class="footer-nav-link magnetic-target">Frequently Asked Questions</a></li>
+            <li><button type="button" class="footer-nav-link secret-link" id="btn-footer-secret" style="background: none; border: none; padding: 0; cursor: pointer; text-align: left;">Secret 404 Drop 👻</button></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Stay Connected & Socials -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Say Hello</h4>
+          <p style="font-size: 0.9rem; color: #D6D2CA;">
+            Questions, fan letters, or secret flavor recipes? We read every dispatch: <br>
+            <strong style="color: var(--sunshine);">hi@zestpop.com</strong>
+          </p>
+          <div class="footer-social-list" aria-label="Social media links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn magnetic-target" aria-label="Follow ZestPop on Instagram" data-cursor="Insta">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn magnetic-target" aria-label="Follow ZestPop on TikTok" data-cursor="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+            <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="social-btn magnetic-target" aria-label="Listen to ZestPop Fizz Playlists on Spotify" data-cursor="Listen">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14.5c2.5-1 5.5-1 8 0"></path>
+                <path d="M7 12c3.5-1.5 7-1.5 10 0"></path>
+                <path d="M6 9.5c4-2 8-2 12 0"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar with Safe-Area Padding -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 ZestPop Beverage Co. All rights reserved. Hand-crafted with pure juice, prebiotics, and dopamine.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility Statement</a>
+          <a href="#">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       12. INTERACTIVE SHOPPING CART DRAWER PANEL
+       ======================================================================== -->
+  <aside class="cart-drawer-overlay" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Cart Drawer" hidden>
+    <div class="cart-drawer-backdrop" id="cart-backdrop"></div>
+    <div class="cart-drawer-panel">
+      <!-- Drawer Header -->
+      <div class="cart-drawer-header">
+        <div class="cart-title-wrap">
+          <h2 class="cart-drawer-title">YOUR POP BOX</h2>
+          <span class="cart-drawer-badge" id="cart-items-pill">0 Cans</span>
+        </div>
+        <button type="button" class="btn-cart-close" id="btn-cart-close" aria-label="Close cart panel">✕</button>
+      </div>
+
+      <!-- Drawer Items List / Empty State -->
+      <div class="cart-drawer-body" id="cart-items-list">
+        <!-- Rendered dynamically by JavaScript -->
+        <div class="cart-empty-state" id="cart-empty-state">
+          <img src="assets/citrus-slice.svg" alt="" width="56" height="56" class="cart-empty-icon" aria-hidden="true">
+          <p class="cart-empty-title">Your box is looking thirsty!</p>
+          <p class="cart-empty-sub">Add any 12-pack of our cold-crushed dopamine sodas to start sipping.</p>
+          <a href="#flavors" class="btn btn-primary btn-sm btn-empty-shop" id="btn-empty-shop">Browse Flavors ✦</a>
+        </div>
+      </div>
+
+      <!-- Drawer Footer -->
+      <div class="cart-drawer-footer" id="cart-drawer-footer">
+        <div class="cart-subtotal-row">
+          <span class="cart-subtotal-label">Subtotal</span>
+          <span class="cart-subtotal-val" id="cart-subtotal-price">$0</span>
+        </div>
+        <div class="cart-shipping-row">
+          <span>Shipping (2-Day Insulated)</span>
+          <span class="free-shipping-tag">FREE</span>
+        </div>
+        <button type="button" class="btn btn-primary btn-checkout" id="btn-checkout">
+          Proceed to Checkout ✦
+        </button>
+        <p class="cart-guarantee-note">✦ 100% Dopamine Guarantee • Cancel or swap anytime</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       13. FUN 404-STYLE EASTER EGG MODAL
+       ======================================================================== -->
+  <dialog class="easter-modal" id="easter-modal" aria-labelledby="modal-404-title" aria-modal="true">
+    <div class="modal-box">
+      <button type="button" class="btn-modal-close" id="btn-modal-close" aria-label="Close secret modal">✕</button>
+      
+      <div class="modal-doodle" aria-hidden="true">
+        <img src="assets/smile.svg" alt="" width="72" height="72">
+      </div>
+
+      <span class="sticker rotate-neg">404: FIZZ NOT FOUND!</span>
+
+      <h3 class="modal-title" id="modal-404-title">YOU BROKE INTO THE SECRET LAB! 👻</h3>
+
+      <p class="modal-desc">
+        You cracked open a flavor that hasn't fermented yet! Our mad juice-chemists are currently testing <strong>Ghost Pepper Kumquat Crunch</strong> in our secret cellar.
+      </p>
+
+      <p class="modal-sub">
+        It's not quite ready for human tastebuds. Grab an Electric Tangerine instead while we extinguish the test kitchen!
+      </p>
+
+      <div class="modal-actions">
+        <a href="#flavors" class="btn btn-primary" id="btn-modal-shop">Shop Real Flavors ✦</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ========================================================================
+       13. FLOATING "BACK TO TOP" BUTTON (Touch-sized, Safe Area positioned)
+       ======================================================================== -->
+  <button type="button" class="btn-back-to-top magnetic-target" id="btn-back-to-top" aria-label="Back to top of page" data-cursor="Top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Toast Notification / Cart Peek -->
+  <div class="toast-notice" id="toast-notice" role="status" aria-live="polite">
+    <span class="toast-emoji" aria-hidden="true">🎉</span>
+    <span class="toast-text" id="toast-text">Added to your box!</span>
+  </div>
+
+  <!-- Confetti Container -->
+  <div id="confetti-container" class="confetti-container" aria-hidden="true"></div>
+
+  <!-- JavaScript Logic with Animation Layer -->
+  <script src="main.js"></script>
+</body>
+</html>

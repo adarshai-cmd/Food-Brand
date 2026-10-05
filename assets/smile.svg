@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Hand-drawn dopamine smiley face -->
+  <circle cx="50" cy="50" r="44" fill="#FFE14D" stroke="#111111" stroke-width="3.5"/>
+  <!-- Left Eye (Citrus wedge) -->
+  <path d="M 30 38 Q 38 30 44 38 Z" fill="#FF6B00" stroke="#111111" stroke-width="2.5"/>
+  <!-- Right Eye (Winking star) -->
+  <path d="M 66 32 L 69 38 L 75 39 L 70 43 L 72 49 L 66 45 L 61 49 L 62 43 L 58 39 L 64 38 Z" fill="#2F3BFF" stroke="#111111" stroke-width="2"/>
+  <!-- Big happy hand-drawn grin -->
+  <path d="M 28 56 C 36 78, 64 78, 72 56" stroke="#111111" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Tongue pop -->
+  <path d="M 44 68 C 44 76, 56 76, 56 68 Z" fill="#FF5FA2" stroke="#111111" stroke-width="2.5"/>
+  <!-- Rosy cheeks -->
+  <ellipse cx="23" cy="54" rx="4" ry="2.5" fill="#FF5FA2" opacity="0.6"/>
+  <ellipse cx="77" cy="54" rx="4" ry="2.5" fill="#FF5FA2" opacity="0.6"/>
+</svg>

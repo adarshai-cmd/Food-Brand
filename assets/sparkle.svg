@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Hand-drawn 4-point sparkle -->
+  <path d="M 40 4 
+           C 41 24, 56 39, 76 40 
+           C 56 41, 41 56, 40 76 
+           C 39 56, 24 41, 4 40 
+           C 24 39, 39 24, 40 4 Z" 
+        fill="#FFE14D" 
+        stroke="#111111" 
+        stroke-width="3.5" 
+        stroke-linejoin="round"/>
+</svg>

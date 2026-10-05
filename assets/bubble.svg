@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <!-- Cluster of 3 playful fizzy soda bubbles -->
+  <!-- Bubble 1 (large) -->
+  <circle cx="45" cy="75" r="30" fill="#FFF8EC" stroke="#111111" stroke-width="3"/>
+  <ellipse cx="38" cy="62" rx="6" ry="10" fill="#2F3BFF" opacity="0.3" transform="rotate(-30 38 62)"/>
+  <ellipse cx="35" cy="60" rx="3" ry="5" fill="#FFFFFF" transform="rotate(-30 35 60)"/>
+  
+  <!-- Bubble 2 (medium) -->
+  <circle cx="76" cy="36" r="18" fill="#FFE14D" stroke="#111111" stroke-width="2.8"/>
+  <ellipse cx="71" cy="28" rx="2" ry="4" fill="#FFFFFF" transform="rotate(-30 71 28)"/>
+
+  <!-- Bubble 3 (small) -->
+  <circle cx="22" cy="24" r="12" fill="#FF5FA2" stroke="#111111" stroke-width="2.5"/>
+  <circle cx="19" cy="20" r="2.5" fill="#FFFFFF"/>
+</svg>

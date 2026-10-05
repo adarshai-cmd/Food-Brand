@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 400" fill="none">
+  <!-- Soft Drop Shadow -->
+  <ellipse cx="110" cy="385" rx="75" ry="12" fill="#111111" opacity="0.25"/>
+
+  <!-- Can Group -->
+  <g stroke="#111111" stroke-linejoin="round">
+    <!-- Top Rim (Aluminum) -->
+    <path d="M 68 28 C 68 22, 152 22, 152 28 L 158 40 C 158 45, 62 45, 62 40 Z" 
+          fill="#FFF8EC" stroke-width="3"/>
+    <!-- Pull Tab / Top Lid Ellipse -->
+    <ellipse cx="110" cy="27" rx="42" ry="7" fill="#E8DEC8" stroke-width="2"/>
+    <ellipse cx="110" cy="27" rx="14" ry="4" fill="#FFF8EC" stroke-width="2"/>
+    <path d="M 104 26 L 116 26 M 110 24 L 110 28" stroke="#111111" stroke-width="2"/>
+
+    <!-- Neck Taper -->
+    <path d="M 58 40 C 58 40, 162 40, 162 40 L 172 65 C 172 65, 48 65, 48 65 Z" 
+          fill="#2F3BFF" stroke-width="3"/>
+
+    <!-- Main Can Body -->
+    <rect x="46" y="65" width="128" height="280" rx="4" fill="#2F3BFF" stroke-width="3.5"/>
+
+    <!-- Can Bottom Taper & Base -->
+    <path d="M 46 345 L 56 370 C 56 375, 164 375, 164 370 L 174 345 Z" 
+          fill="#FFF8EC" stroke-width="3"/>
+    <ellipse cx="110" cy="370" rx="54" ry="6" fill="#D9CEB6" stroke-width="2.5"/>
+  </g>
+
+  <!-- CAN LABEL DESIGN -->
+  <g clip-path="url(#can-clip-lagoon)">
+    <defs>
+      <clipPath id="can-clip-lagoon">
+        <rect x="47" y="66" width="126" height="278" rx="3"/>
+      </clipPath>
+      <linearGradient id="lagoon-grad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#1B26DE"/>
+        <stop offset="35%" stop-color="#2F3BFF"/>
+        <stop offset="70%" stop-color="#4E59FF"/>
+        <stop offset="100%" stop-color="#1721C2"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Base Gradient -->
+    <rect x="47" y="66" width="126" height="278" fill="url(#lagoon-grad)"/>
+
+    <!-- Can 3D Sheen -->
+    <rect x="47" y="66" width="18" height="278" fill="#111111" opacity="0.1"/>
+    <rect x="80" y="66" width="14" height="278" fill="#FFFFFF" opacity="0.25"/>
+    <rect x="156" y="66" width="17" height="278" fill="#111111" opacity="0.15"/>
+
+    <!-- Giant Bubblegum Disc -->
+    <circle cx="110" cy="185" r="50" fill="#FF5FA2" stroke="#111111" stroke-width="3"/>
+
+    <!-- Hand-drawn Blueberry & Mint Emblem -->
+    <g transform="translate(110, 185) scale(0.7) translate(-50, -50)">
+      <!-- Mint leaf -->
+      <path d="M 50 20 C 70 20, 80 40, 50 60 C 20 40, 30 20, 50 20 Z" fill="#69D945" stroke="#111111" stroke-width="2.5"/>
+      <path d="M 50 20 L 50 55" stroke="#111111" stroke-width="2"/>
+      <!-- Blueberry circle -->
+      <circle cx="50" cy="62" r="26" fill="#1B26DE" stroke="#111111" stroke-width="3"/>
+      <circle cx="43" cy="55" r="6" fill="#4E59FF"/>
+      <!-- Crown star on top of berry -->
+      <path d="M 44 42 L 50 38 L 56 42 L 54 48 L 46 48 Z" fill="#FFF8EC" stroke="#111111" stroke-width="1.8"/>
+    </g>
+
+    <!-- Top Label Header: Brand Wordmark -->
+    <rect x="58" y="80" width="104" height="26" rx="6" fill="#FFE14D" stroke="#111111" stroke-width="2.5"/>
+    <text x="110" y="98" font-family="'Bricolage Grotesque', sans-serif" font-weight="900" font-size="16" fill="#111111" text-anchor="middle" letter-spacing="1">ZESTPOP</text>
+
+    <!-- Flavor Name -->
+    <text x="110" y="123" font-family="'Bricolage Grotesque', sans-serif" font-weight="800" font-size="12" fill="#FFE14D" text-anchor="middle" letter-spacing="0.5">MIDNIGHT</text>
+    <text x="110" y="139" font-family="'Bricolage Grotesque', sans-serif" font-weight="900" font-size="16" fill="#FFF8EC" text-anchor="middle" letter-spacing="1">LAGOON</text>
+
+    <!-- Flavor Subtext Badge -->
+    <rect x="66" y="254" width="88" height="18" rx="9" fill="#FFF8EC" stroke="#111111" stroke-width="1.5"/>
+    <text x="110" y="267" font-family="'DM Sans', sans-serif" font-weight="700" font-size="8.5" fill="#111111" text-anchor="middle" letter-spacing="0.8">WILD BLUEBERRY</text>
+
+    <!-- Specs at Bottom -->
+    <text x="110" y="295" font-family="'DM Sans', sans-serif" font-weight="700" font-size="8" fill="#FFF8EC" text-anchor="middle">38 CALS • MINT INFUSED</text>
+    <text x="110" y="310" font-family="'DM Sans', sans-serif" font-weight="800" font-size="7.5" fill="#FFE14D" text-anchor="middle" letter-spacing="1.5">12 FL OZ (355ML)</text>
+
+    <!-- Condensation Drops -->
+    <circle cx="56" cy="140" r="3" fill="#FFF8EC" opacity="0.8"/>
+    <circle cx="162" cy="190" r="2.5" fill="#FFF8EC" opacity="0.8"/>
+    <circle cx="62" cy="270" r="2" fill="#FFF8EC" opacity="0.7"/>
+  </g>
+</svg>

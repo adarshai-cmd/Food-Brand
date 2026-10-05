@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" fill="none">
+  <!-- Hand-drawn curved arrow with ink line and arrow head -->
+  <path d="M 12 74 C 28 32, 60 12, 102 24" 
+        stroke="#111111" 
+        stroke-width="3.5" 
+        stroke-linecap="round"/>
+  <!-- Arrow Head -->
+  <path d="M 82 12 L 105 24 L 92 42" 
+        stroke="#111111" 
+        stroke-width="3.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <!-- Accent speed dashes -->
+  <path d="M 6 62 L 14 65" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 10 82 L 18 80" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 400" fill="none">
+  <!-- Soft Drop Shadow -->
+  <ellipse cx="110" cy="385" rx="75" ry="12" fill="#111111" opacity="0.25"/>
+
+  <!-- Can Group -->
+  <g stroke="#111111" stroke-linejoin="round">
+    <!-- Top Rim (Aluminum) -->
+    <path d="M 68 28 C 68 22, 152 22, 152 28 L 158 40 C 158 45, 62 45, 62 40 Z" 
+          fill="#FFF8EC" stroke-width="3"/>
+    <!-- Pull Tab / Top Lid Ellipse -->
+    <ellipse cx="110" cy="27" rx="42" ry="7" fill="#E8DEC8" stroke-width="2"/>
+    <ellipse cx="110" cy="27" rx="14" ry="4" fill="#FFF8EC" stroke-width="2"/>
+    <path d="M 104 26 L 116 26 M 110 24 L 110 28" stroke="#111111" stroke-width="2"/>
+
+    <!-- Neck Taper -->
+    <path d="M 58 40 C 58 40, 162 40, 162 40 L 172 65 C 172 65, 48 65, 48 65 Z" 
+          fill="#FFE14D" stroke-width="3"/>
+
+    <!-- Main Can Body -->
+    <rect x="46" y="65" width="128" height="280" rx="4" fill="#FFE14D" stroke-width="3.5"/>
+
+    <!-- Can Bottom Taper & Base -->
+    <path d="M 46 345 L 56 370 C 56 375, 164 375, 164 370 L 174 345 Z" 
+          fill="#FFF8EC" stroke-width="3"/>
+    <ellipse cx="110" cy="370" rx="54" ry="6" fill="#D9CEB6" stroke-width="2.5"/>
+  </g>
+
+  <!-- CAN LABEL DESIGN -->
+  <g clip-path="url(#can-clip-yuzu)">
+    <defs>
+      <clipPath id="can-clip-yuzu">
+        <rect x="47" y="66" width="126" height="278" rx="3"/>
+      </clipPath>
+      <linearGradient id="yuzu-grad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#E5C722"/>
+        <stop offset="35%" stop-color="#FFE14D"/>
+        <stop offset="70%" stop-color="#FFF079"/>
+        <stop offset="100%" stop-color="#DEB810"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Base Gradient -->
+    <rect x="47" y="66" width="126" height="278" fill="url(#yuzu-grad)"/>
+
+    <!-- Can 3D Sheen -->
+    <rect x="47" y="66" width="18" height="278" fill="#111111" opacity="0.06"/>
+    <rect x="80" y="66" width="14" height="278" fill="#FFFFFF" opacity="0.3"/>
+    <rect x="156" y="66" width="17" height="278" fill="#111111" opacity="0.1"/>
+
+    <!-- Background Pattern: Playful lime green waves & dots -->
+    <path d="M 47 160 Q 75 140 110 160 T 173 160 L 173 240 Q 140 260 110 240 T 47 240 Z" fill="#69D945" opacity="0.25"/>
+
+    <!-- Giant Cobalt / Tangerine Star Disc -->
+    <circle cx="110" cy="185" r="50" fill="#2F3BFF" stroke="#111111" stroke-width="3"/>
+
+    <!-- Hand-drawn Yuzu / Lemon Starburst Emblem -->
+    <path d="M 110 145 C 111 160, 125 174, 140 175 C 125 178, 112 192, 110 225 C 108 192, 95 178, 80 175 C 95 174, 109 160, 110 145 Z" 
+          fill="#FFE14D" stroke="#111111" stroke-width="2.5"/>
+    <circle cx="110" cy="185" r="14" fill="#FF5FA2" stroke="#111111" stroke-width="2"/>
+    <circle cx="110" cy="185" r="6" fill="#FFF8EC"/>
+
+    <!-- Top Label Header: Brand Wordmark -->
+    <rect x="58" y="80" width="104" height="26" rx="6" fill="#111111" stroke="#111111" stroke-width="2.5"/>
+    <text x="110" y="98" font-family="'Bricolage Grotesque', sans-serif" font-weight="900" font-size="16" fill="#FFE14D" text-anchor="middle" letter-spacing="1">ZESTPOP</text>
+
+    <!-- Flavor Name -->
+    <text x="110" y="123" font-family="'Bricolage Grotesque', sans-serif" font-weight="800" font-size="13" fill="#111111" text-anchor="middle" letter-spacing="0.5">YUZU COSMIC</text>
+    <text x="110" y="139" font-family="'Bricolage Grotesque', sans-serif" font-weight="900" font-size="16" fill="#2F3BFF" text-anchor="middle" letter-spacing="1">FIZZ</text>
+
+    <!-- Flavor Subtext Badge -->
+    <rect x="66" y="254" width="88" height="18" rx="9" fill="#FF6B00" stroke="#111111" stroke-width="1.5"/>
+    <text x="110" y="267" font-family="'DM Sans', sans-serif" font-weight="700" font-size="8.5" fill="#FFF8EC" text-anchor="middle" letter-spacing="0.8">TART &amp; ZEN</text>
+
+    <!-- Specs at Bottom -->
+    <text x="110" y="295" font-family="'DM Sans', sans-serif" font-weight="700" font-size="8" fill="#111111" text-anchor="middle">30 CALS • MEYER LEMON</text>
+    <text x="110" y="310" font-family="'DM Sans', sans-serif" font-weight="800" font-size="7.5" fill="#2F3BFF" text-anchor="middle" letter-spacing="1.5">12 FL OZ (355ML)</text>
+
+    <!-- Condensation Drops -->
+    <circle cx="58" cy="130" r="2.5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="61" cy="138" r="1.5" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="162" cy="210" r="3" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="165" cy="218" r="2" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+</svg>

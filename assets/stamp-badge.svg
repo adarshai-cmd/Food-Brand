@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- 16-point scalloped star badge -->
+  <path d="M 60 5 L 67 18 L 81 12 L 83 27 L 98 27 L 94 41 L 108 47 L 99 59 L 109 71 L 96 79 L 100 93 L 85 95 L 83 109 L 69 104 L 60 115 L 51 104 L 37 109 L 35 95 L 20 93 L 24 79 L 11 71 L 21 59 L 12 47 L 26 41 L 22 27 L 37 27 L 39 12 L 53 18 Z"
+        fill="#FFE14D"
+        stroke="#111111"
+        stroke-width="3"
+        stroke-linejoin="round"/>
+  <!-- Inner circular ring -->
+  <circle cx="60" cy="60" r="38" fill="#FFF8EC" stroke="#111111" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <!-- Stamp Text -->
+  <text x="60" y="52" font-family="'Bricolage Grotesque', sans-serif" font-weight="900" font-size="11" fill="#111111" text-anchor="middle" letter-spacing="1">REAL</text>
+  <text x="60" y="66" font-family="'Bricolage Grotesque', sans-serif" font-weight="900" font-size="13" fill="#FF6B00" text-anchor="middle" letter-spacing="0.5">SQUEEZE</text>
+  <text x="60" y="77" font-family="'Bricolage Grotesque', sans-serif" font-weight="800" font-size="8" fill="#111111" text-anchor="middle" letter-spacing="1">✦ 100% ✦</text>
+</svg>
